@@ -7,6 +7,7 @@ backend django framework, database Mysql
 pakages:
 pip install django
 pip install client mysql
+
 ![Screenshot 2024-05-13 154122](https://github.com/Sathpriyane123/phonebook/assets/82439461/b31906ac-828f-410f-8ddb-51f39e5f2887)
 
 home page
