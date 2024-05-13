@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        text-align: center;
+        background-color: aqua;
+        color: rgb(6, 6, 135);
+    }
+    h1{
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 30px;  
+    }
+    .up{
+        float: left;
+        width: 50%;
+        height: 100%;
+    }
+    .del{
+        float: right;
+        width: 50%;
+        height: 100%;
+    }
+    .txt{
+        padding: 5px;
+        margin-top: 10px;
+        border-radius: 10px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        border: solid 2px blue;
+        width: 300px;
+        height: 20px;
+    }
+    .btn2{
+        padding: 15px;
+        margin-top: 20px;
+        border-radius: 10px;
+        color: blue;
+        background-color: chartreuse;
+        border: none;
+        cursor: pointer;
+        font-weight: bold;
+    }
+    .btn2:hover{
+        background-color: blue;
+        color: chartreuse;
+        border: solid 2px black;       
+    }
+    .btn3{
+        padding: 15px;
+        margin-top: 20px;
+        border-radius: 10px;
+        background-color: red;
+        color: aliceblue;
+        font-weight: bold;
+        border: none;
+        cursor: pointer;
+    }
+    .btn3:hover{
+        color: red;
+        background-color:blue;
+        border: solid 2px black;    
+    }
+    .btn4{        padding: 15px;
+        margin-top: 20px;
+        border-radius: 10px;
+        background-color: blue;
+        float: left;
+        color: aliceblue;
+        font-weight: bold;
+        border: none;
+        cursor: pointer;  
+    }
+    .btn4:hover{
+        background-color: aliceblue;
+        color: blue;
+    }
+</style>
+<body>
+    <h1>OPERTION IN CONTACT</h1>
+    <div class="up">
+        <h2>UPDATE</h2>
+        <form action="update" method="POST">
+            {% csrf_token %}
+            <label for="">OLD NAME</label><br>
+            <input type="text" placeholder="old name" class="txt" name="oldname"><br><ul></ul>
+            <label for="">NEW NAME</label><br>
+            <input type="text" placeholder="new name" class="txt" name="newname"><br><ul></ul>
+            <label for="">NEW NUMBER</label><br>
+            <input type="text" class="txt" placeholder="new number" name="newnum"><br><ul></ul>
+            <input type="submit" value="UPDATE" class="btn2">
+            {{key}}
+        </form>
+    </div>   
+    <div class="del">
+        <h2>DELETE</h2>
+        <form action="dlt" method="POST">
+            {% csrf_token %}
+            <label for="">ENTER NAME TO DELETE</label><br>
+            <input type="text" placeholder="delete name" class="txt" name="dlt"><br><ul></ul>
+            <input type="submit" value="DELETE" class="btn3" name="btn">
+            {{del}}
+        </form>
+    </div>
+    <div>
+        <a href="{% url 'home3' %}"><input type="submit" value="HOME" class="btn4"></a>
+    </div>
+</body>
+</html>

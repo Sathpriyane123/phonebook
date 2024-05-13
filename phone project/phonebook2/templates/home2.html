@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            align-items: center;
+            text-align: center;
+            background-color: aqua;
+            color: rgb(7, 7, 133);
+            font-size: 30px;
+        }
+        .ins{
+            text-align: center;
+            font-size: 50px;
+        }
+        .txt{
+            padding: 10px;
+            width: 400px;
+            height: 25px;
+            border-radius: 10px;
+            font-size:25px;
+            background-color: rgb(146, 220, 237);
+            font-weight: bold;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .btn1{
+            padding: 20px, 20px, 20px, 20px;
+            height: 50px;
+            width: 100px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 20px;
+            font-family: 'Times New Roman', Times, serif;
+            background-color: blue;
+            color: aliceblue;
+            border-radius: 10px;
+            border:  none;
+            cursor: pointer;
+        }
+        .btn1:hover{
+            background-color: aliceblue;
+            color: blue;
+            border: solid 2px black;
+        }
+        .btn2{
+            padding: 10px, 10px, 10px, 10px;
+            height: 50px;
+            width: 80px;
+            font-weight: bold;
+            float: left;
+            font-size: 20px;
+            font-family: 'Times New Roman', Times, serif;
+            background-color: blue;
+            color: aliceblue;
+            border-radius: 10px;
+            border:  none;
+            cursor: pointer;
+        }
+        .btn2:hover{
+            background-color: aliceblue;
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <a href="{% url 'home1' %}"><input type="submit" value="HOME" class="btn2"></a>
+    <h1>CREATE CONTACT</h1>
+    <div class="ins">
+        <form action="phonebook" method="POST">
+            {% csrf_token %}
+            <label for="">Name</label><br>
+            <input type="text" name="name" class="txt" placeholder="enter name"><br><ul></ul>
+            <label for="">Phone</label><br>
+            <input type="number" name="phone" class="txt" placeholder="enter phonenumber"><br><ul></ul>
+            <input type="submit" name="btn" value="SAVE" class="btn1">
+            {{key}}
+        </form>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <style>
+        body{
+            background-color: aqua;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+        }
+        h1{
+            text-align: center;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-weight: bolder;
+            font-size: 50px;
+            color: blue;
+            font-style: oblique;
+        }
+        .body{
+            height: 500x;
+            width: 900px;
+            border: solid 3px blueviolet;
+            background-color: aquamarine;
+            margin-top: 10%;
+        }
+        p{
+            font-size: 20px;
+            font-family: 'Times New Roman', Times, serif;
+            font-style: normal;
+            text-align: center;
+            justify-content: center;
+            justify-items: auto;
+            color: blue;
+        }
+        .btn{
+            float: left;
+            margin-top: -200px;
+            justify-content: center;
+            align-items: center;
+            justify-content: center;
+            margin-left: 10px;
+            padding: 10px 10px 10px 10px;
+            background-color: blue;
+            color: azure;
+            border-radius: 10px;
+            border: none;
+            cursor: pointer;
+        }
+        .btn:hover{
+            background-color: azure;
+            color: blue;
+            transition: 2, ease;
+        }
+    </style>
+</head>
+<body>
+    <a href="{% url 'home4' %}"><input type="submit" value="HOME" class="btn"></a>
+    <div class="body">
+        <h1>ABOUT</h1>
+        <hr>
+        <p>The content of a telephone directory typically includes information about individuals and businesses, organized in a structured format to facilitate easy searching. Here are the key components commonly found in the content of a telephone directory:</p>
+        <p>Telephone directories have evolved over time, transitioning from printed books to online databases and mobile phone contact lists. The content of a directory is designed to provide a comprehensive and organized reference for individuals and businesses in a given area, making it easier for people to connect and communicate.</p>
+    </div>
+</body>
+</html>

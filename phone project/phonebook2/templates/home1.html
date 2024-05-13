@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'home.css' %}">
+    <style>
+        body{
+            background-color: rgb(177, 240, 219);
+            align-items: center;
+            text-align: center;
+            
+        }
+        .table{
+            color: rgb(24, 84, 162);
+            align-items: center;
+            font-size: 25px ;
+            font-weight: bold;
+            text-align: center;
+            align-items: center;
+            background-color: aqua;
+            height: 100px;
+            width: 90%;
+            margin-top: 30px;
+            border: solid 4px rgb(209, 26, 26);
+            position: relative;
+            margin-left: 30px;
+            margin-right: 30px;
+        }
+        .dta:hover{
+            background-color: grey;
+            color: white;
+        
+        }
+        .head{
+            background-color: violet;
+            color: blueviolet;
+            font-weight: bold;
+            border:solid 4px  rgb(209, 26, 26);
+        }
+        .btn{
+            padding: 20px, 20px, 20px, 20px;
+            height: 50px;
+            width: 100px;
+            background-color: blue;
+            border-radius: 10px;
+            color: aliceblue;
+            text-align: center;
+            font-weight: bold;
+            border: 10px;
+            cursor: pointer;
+        }
+        .btn:hover{
+            background-color: aliceblue;
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="dis">
+        <form action="display">
+            <table border="1" class="table">
+                <tr>
+                   
+                    <td class="head">Name</td>
+                    <td class="head">Phone</td>
+                </tr>
+                {% for i in phn %}
+                <tr class="dta">
+                  
+                    <td>{{i.name}}</td>
+                    <td>{{i.phone}}</td>
+                </tr>
+                {% endfor %}
+            </table><br>
+        </form>
+    </div>
+
+<a href="{% url 'home2' %}"><input type="submit" value="HOME" class="btn"></a>
+
+</body>
+</html>
